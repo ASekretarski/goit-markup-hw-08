@@ -47,8 +47,9 @@
 
     &__socials {
         display: flex;
-        justify-content: space-between;
-        padding: 16px 122px 24px;
+        gap: 10px;
+        justify-content: center;
+        padding: 16px 0px 24px;
     }
 
     &__socials-icon {
