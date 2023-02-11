@@ -95,7 +95,33 @@
 }
 
 @media (max-width: 767px) {
-
+    .mobile-contacts {
+        &__phone-number {
+            font-size: 34px;
+            font-weight: 500;
+            color: $primary-brand-color;
+        }
+        &__email-address {
+            font-size: 24px;
+            font-weight: 500;
+            color: $secondary-text-color;
+            margin: 32px 0px 64px;
+        }
+        &__socials {
+            display: flex;
+            color: $primary-brand-color;
+            }
+        &__social-link {
+            font-size: 18px;
+            &:not(:last-child) {
+                border-right: 1px solid $primary-text-color-op20;
+                padding-right: 10px;
+            }
+            &:not(:first-child) {
+                padding-left: 10px;
+            }
+        }
+    }
 }
 
 
@@ -133,6 +159,9 @@
 }
 
 .menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
