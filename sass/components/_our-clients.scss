@@ -1,24 +1,27 @@
 .our-clients {
-    padding: 94px 0px;
+    padding: 60px 0px;
 
     &__client-list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 30px;
     }
 
     &__client-logo {
+        flex-basis: calc((100% - 30px) / 2);
         display: block;
     }
 
     &__heading {
-        margin: 0px 0px 50px;
-        font-size: 36px;
+        margin: 0px 0px 30px;
+        font-size: 28px;
         line-height: 1.17;
         text-align: center;
     }
 
     &__icon {
+        width: 210px;
         display: block;
         padding: 15px 31px;
         border: 1px solid $quaternary-brand-color;
@@ -32,4 +35,41 @@
             fill: $primary-brand-color;
         }
     }
+}
+
+@media screen and (min-width: 768px) {
+
+.our-clients {
+
+        &__client-logo {
+            flex-basis: calc((100% - 60px) / 3);
+        }
+
+        &__icon {
+            width: 226px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+.our-clients {
+        padding: 94px 0px;
+
+        &__client-list {
+            flex-wrap: nowrap;
+        }
+
+        &__heading {
+            margin: 0px 0px 50px;
+            font-size: 36px;
+        }
+
+        &__icon {
+            width: 170px;
+            }
+        }
+    }
+
 }
