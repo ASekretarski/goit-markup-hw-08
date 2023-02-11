@@ -28,6 +28,17 @@
           <span class="logo__first-part">Web</span>
           <span class="logo__second-part">Studio</span>
         </a>
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle__icon" width="24px" height="16px">
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+
         <nav class="header__nav-menu nav-menu">
           <ul class="nav-menu__list list">
             <li class="list__item">
@@ -47,7 +58,7 @@
             </li>
           </ul>
         </nav>
-        <div class="header__contacts">
+        <div class="header__contacts contacts">
           <ul class="contacts__list list">
             <li>
               <a class="contacts__link link" href="mailto:info@devstudio.com"
@@ -64,6 +75,47 @@
                 </svg>
                 <div>+48 111 111 111</div>
               </a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+
+          <ul class="mobile-menu">
+            <li>
+              <a
+                class="list__mobile-nav-link list__mobile-nav-link--active link"
+                href="./index.html"
+                >Agencja</a
+              >
+            </li>
+            <li>
+              <a
+                class="list__mobile-nav-link list__mobile-nav-link--active link"
+                href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                class="list__mobile-nav-link list__mobile-nav-link--active link"
+                href=""
+                >Kontakt</a
+              >
             </li>
           </ul>
         </div>
@@ -564,5 +616,12 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
