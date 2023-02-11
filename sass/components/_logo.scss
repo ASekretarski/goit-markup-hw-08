@@ -1,0 +1,35 @@
+.logo {
+    display: inline-flex;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: $tertiary-brand-color;
+    line-height: 1.19;
+    text-decoration: none;
+
+    &:visited {
+    color: $tertiary-brand-color;
+    }
+
+    &__first-part {
+        color: $primary-brand-color;
+
+        &:visited {
+            color: $primary-brand-color;
+        }
+    }
+
+
+
+   &__second-part--light-themed {
+      color: $tertiary-text-color;
+
+      &:visited {
+        color: $tertiary-text-color;
+      }
+    }
+}
+
+
+
+
