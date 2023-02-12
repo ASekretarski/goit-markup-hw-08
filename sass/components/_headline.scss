@@ -1,7 +1,8 @@
 .headline {
     background-color: $primary-bgrd-color;
+    hight: 100%;
     background-image: url('../images/headline-background-image-480-400.jpg'), linear-gradient(to bottom, #662F303A, #662F303A);
-    background-size: 480px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 94px 0px;
@@ -27,19 +28,34 @@
     }
 }
 
+@media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .headline {
+        background-image: url('../images/headline-background-image-1600-600.jpg'),
+            linear-gradient(to bottom, #662F303A, #662F303A);
+    }
+}
+
 @media screen and (min-width: 768px) {
 
     .headline {
-        background-color: $primary-bgrd-color;
         background-image: url('../images/headline-background-image-768-400.jpg'), linear-gradient(to bottom, #662F303A, #662F303A);
-        background-size: 768px;
-        background-repeat: no-repeat;
-        background-position: center;
         padding: 0px;
-        text-align: center;
     
             & .container {
                 padding: 106px 201px 106px 202px;
+            }
+        }
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .headline {
+                background-image: url('../images/headline-background-image-1600-600.jpg'),
+                    linear-gradient(to bottom, #662F303A, #662F303A);
             }
         }
 }
@@ -47,13 +63,8 @@
 @media screen and (min-width: 1200px) {
 
     .headline {
-            background-color: $primary-bgrd-color;
             background-image: url('../images/headline-background-image-1600-600.jpg'), linear-gradient(to bottom, #662F303A, #662F303A);
-            background-size: 1600px;
-            background-repeat: no-repeat;
-            background-position: center;
             padding: 94px 0px;
-            text-align: center;
     
             &__heading {
                 font-size: 44px;

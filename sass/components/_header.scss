@@ -9,6 +9,24 @@
     }
 }
 
+@media (min-width:768px) {
+    .header {
+        padding: 20px;
+    &__logo {
+        font-size: 24px;
+    }
+    }
+}
+
+@media (min-width:1200px) {
+    .header {
+        padding: 26px;
+    &__logo {
+        font-size: 26px;
+    }
+    }
+}
+
 .list__nav-link {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -77,6 +95,18 @@
     }
 }
 
+@media (max-width: 1199px) {
+    .contacts {
+        &__list {
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__link {
+            font-size: 12px;
+        }
+    }
+}
+
 @media (max-width: 767px) {
     .header__contacts {
         display: none;
@@ -96,15 +126,18 @@
 
 @media (max-width: 767px) {
     .mobile-contacts {
-        &__phone-number {
+        &__phone-link {
             font-size: 34px;
             font-weight: 500;
             color: $primary-brand-color;
         }
-        &__email-address {
+        &__email-link {
             font-size: 24px;
             font-weight: 500;
             color: $secondary-text-color;
+        }
+
+        &__email-address {
             margin: 32px 0px 64px;
         }
         &__socials {
@@ -159,7 +192,7 @@
 }
 
 .menu-container {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
@@ -173,17 +206,18 @@
 
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
-}
 
-.menu-container.is-open {
-    transform: translateX(0);
-}
+    &.menu-container.is-open {
+        display: flex;
+        transform: translateX(0);
+        }
 
-.menu-container .menu-toggle {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    color: $primary-text-color;
+    & .menu-toggle {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        color: $primary-text-color;
+    }
 }
 
 .mobile-menu {
