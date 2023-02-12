@@ -192,7 +192,6 @@
 }
 
 .menu-container {
-    display: none;
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
@@ -210,6 +209,7 @@
     &.menu-container.is-open {
         display: flex;
         transform: translateX(0);
+        transition: transform 250ms ease-in-out;
         }
 
     & .menu-toggle {
